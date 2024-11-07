@@ -5,49 +5,102 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Salsa&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Salsa&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Salsa&family=Work+Sans:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/style.css">
-    <title>Sockeva</title>
+    <title>Contacto | Sockeva</title>
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <img class="img_logo" src="../img/logo.jpg" alt="logo Sockeva">
+    <!-- Header -->
+    <header class="bg-dark text-white text-center py-4">
+        <div class="logo mb-3">
+            <img class="img_logo" src="../img/logo.jpg" alt="Logo de Sockeva">
         </div>
-        <h1>
-            Sockeva
-        </h1>
-        <h2>
-            Contactos
-        </h2>
-        <nav>
-            <ul>
-                <li> <a href="../index.html">Inicio</a> </li>
-                <li> <a href="#">Nosotros</a> </li>
-                <li> <a href="productos.html">Productos</a> </li>
-                <li> <a href="contacto.html">Contacto</a> </li>
-            </ul>      
+        <h1 class="display-4">Sockeva</h1>
+        <h2 class="h2">Contactos</h2>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
+                    <li class="nav-item"><a class="nav-link" href="productos.html">Productos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
         </nav>
         <hr>
     </header>
-    <main>
-        
+
+    <!-- Main Content -->
+    <main class="container my-5">
+        <section class="text-center mb-5">
             <h2>Contacto</h2>
-            <h4>Mail</h4>
-            <p>Sockevainfo@gmail.com</p>
-            <h4>Telefono</h4>
-            <p>4967-4856</p>
-            <h4>Direccion</h4>
-            <p>Justo 2455, Buenos Aires, Argentina</p>
-            
+            <p>Si tienes alguna consulta o comentario, ¡nos encantaría saber de ti!</p>
+        </section>
+
+        <!-- Contact Info -->
+        <section class="contact-info bg-light p-4 rounded shadow mb-5">
+            <h4>Mail 💌: <a href="mailto:sockevainfo@gmail.com">sockevainfo@gmail.com</a></h4>
+            <h4>Teléfono ☎: <a href="tel:49674856">4967-4856</a></h4>
+            <h4>Dirección: Justo 2455, Buenos Aires, Argentina</h4>
+        </section>
+
+        <!-- Contact Form -->
+        <section class="contact-form bg-white p-4 rounded shadow">
+            <h2>Envíanos un mensaje</h2>
+            <form action="https://example.com/form-handler" method="POST" class="needs-validation" novalidate>
+                <div class="form-group">
+                    <label for="name">Nombre:</label>
+                    <input type="text" class="form-control" id="name" name="name" required>
+                    <div class="invalid-feedback">Por favor, ingresa tu nombre.</div>
+                </div>
+                <div class="form-group">
+                    <label for="email">Correo electrónico:</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                    <div class="invalid-feedback">Por favor, ingresa un correo válido.</div>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Teléfono:</label>
+                    <input type="tel" class="form-control" id="phone" name="phone">
+                </div>
+                <div class="form-group">
+                    <label for="message">Mensaje:</label>
+                    <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                    <div class="invalid-feedback">Por favor, escribe tu mensaje.</div>
+                </div>
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </form>
+        </section>
     </main>
-    <footer>
-        <h4>Mail💌: sockevainfo@gmail.com </h4>
-        <h4>Teléfono☎: 4967-4856</h4>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2023 Sockeva | Todos los derechos reservados.</p>
     </footer>
-    
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        // Custom Bootstrap validation for the form
+        (function() {
+            'use strict';
+            window.addEventListener('load', function() {
+                var forms = document.getElementsByClassName('needs-validation');
+                Array.prototype.filter.call(forms, function(form) {
+                    form.addEventListener('submit', function(event) {
+                        if (form.checkValidity() === false) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                        }
+                        form.classList.add('was-validated');
+                    }, false);
+                });
+            }, false);
+        })();
+    </script>
 </body>
 </html>
