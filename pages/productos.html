@@ -1,64 +1,80 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Salsa&family=Work+Sans:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/style.css">
     <title>Productos | Sockeva</title>
 </head>
 <body>
     <!-- Header -->
-    <header class="bg-dark text-white py-3">
-        <div class="logo">
+    <header class="bg-dark text-white py-3 text-center">
+        <div class="logo mb-3">
             <img class="img_logo" src="../img/logo.jpg" alt="Logo de Sockeva">
         </div>
-        <h1>Sockeva</h1>
-        <h2>Productos Sockeva</h2>
-        <nav>
-            <ul class="navbar">
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="nosotros.html">Nosotros</a></li>
-                <li><a href="productos.html">Productos</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-            </ul>      
+        <h1 class="display-4">Sockeva</h1>
+        <h2 class="h2">Productos Sockeva</h2>
+        <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link text-white" href="../index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="nosotros.html">Nosotros</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="productos.html">Productos</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
         </nav>
-        <hr>
+        <hr class="bg-light">
     </header>
     
     <!-- Sección Productos -->
-    <main class="productos">
-        <h2 class="section-title">Categorías de Productos</h2>
-        <section class="product-category">
+    <main class="container my-5">
+        <h2 class="section-title text-center mb-5">Categorías de Productos</h2>
+        <section class="row text-center">
             <!-- Categoría 1 -->
-            <figure class="product-item">
-                <img class="imgGral" src="../img/mediasazules.jpg" alt="Medias 3/4 para hombre">
-                <figcaption>Medias 3/4 para hombre</figcaption>
-            </figure>
+            <div class="col-md-4 mb-4">
+                <figure class="product-item">
+                    <img class="img-fluid rounded" src="../img/mediasazules.jpg" alt="Medias 3/4 para hombre">
+                    <figcaption class="mt-3">Medias 3/4 para hombre</figcaption>
+                </figure>
+            </div>
             
             <!-- Categoría 2 -->
-            <figure class="product-item">
-                <img class="imgGral" src="../img/mediasrosa.jpg" alt="Medias 3/4 para mujeres">
-                <figcaption>Medias 3/4 para mujeres</figcaption>
-            </figure>
+            <div class="col-md-4 mb-4">
+                <figure class="product-item">
+                    <img class="img-fluid rounded" src="../img/mediasrosa.jpg" alt="Medias 3/4 para mujeres">
+                    <figcaption class="mt-3">Medias 3/4 para mujeres</figcaption>
+                </figure>
+            </div>
             
             <!-- Categoría 3 -->
-            <figure class="product-item">
-                <img class="imgGral" src="../img/media-azul.jpg" alt="Medias largas deportivas unisex">
-                <figcaption>Medias largas deportivas unisex</figcaption>
-            </figure>
+            <div class="col-md-4 mb-4">
+                <figure class="product-item">
+                    <img class="img-fluid rounded" src="../img/media-azul.jpg" alt="Medias largas deportivas unisex">
+                    <figcaption class="mt-3">Medias largas deportivas unisex</figcaption>
+                </figure>
+            </div>
         </section>
         <hr>
     </main>
 
     <!-- Footer -->
-    <footer>
+    <footer class="bg-dark text-white text-center py-3">
         <div class="contact-info">
-            <p>Mail 💌: <a href="mailto:sockevainfo@gmail.com">sockevainfo@gmail.com</a></p>
-            <p>Teléfono ☎: <a href="tel:49674856">4967-4856</a></p>
+            <p>Mail 💌: <a href="mailto:sockevainfo@gmail.com" class="text-white">sockevainfo@gmail.com</a></p>
+            <p>Teléfono ☎: <a href="tel:49674856" class="text-white">4967-4856</a></p>
         </div>
     </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>

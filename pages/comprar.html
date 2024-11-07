@@ -32,7 +32,7 @@
                     <ul class="navbar-nav mx-auto">
                         <li class="nav-item"><a class="nav-link" href="#">Inicio</a></li>
                         <li class="nav-item"><a class="nav-link" href="./nosotros.html">Nosotros</a></li>
-                        <li class="nav-item"><a class="nav-link" href=".//pages/productos.html">Productos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./pages/productos.html">Productos</a></li>
                         <li class="nav-item"><a class="nav-link" href="./pages/contacto.html">Contacto</a></li>
                     </ul>
                 </div>
@@ -42,16 +42,91 @@
 
     <!-- Main Content -->
     <main class="container my-5">
-        <section class="text-center">
+        <!-- Sección de Productos Destacados -->
+        <section class="productos-destacados text-center mb-5">
+            <h2 class="mb-4">Productos Destacados</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card shadow-sm">
+                        <img src="../img/mediasazules.jpg" class="card-img-top" alt="Medias azules">
+                        <div class="card-body">
+                            <h5 class="card-title">Medias 3/4 Hombre</h5>
+                            <p class="card-text">Comodidad y estilo en cada paso.</p>
+                            <p class="text-primary">$2000</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card shadow-sm">
+                        <img src="../img/mediasrosa.jpg" class="card-img-top" alt="Medias rosas">
+                        <div class="card-body">
+                            <h5 class="card-title">Medias 3/4 Mujer</h5>
+                            <p class="card-text">Estilo único, diseño atractivo.</p>
+                            <p class="text-primary">$2000</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card shadow-sm">
+                        <img src="../img/media-azul.jpg" class="card-img-top" alt="Medias deportivas">
+                        <div class="card-body">
+                            <h5 class="card-title">Medias Deportivas Unisex</h5>
+                            <p class="card-text">Perfectas para el deporte diario.</p>
+                            <p class="text-primary">$4000</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Contacto para Compras -->
+        <section class="text-center mb-5">
             <h2 class="mb-4">Contacto para Compra</h2>
-            <p>Ponte en contacto con nosotros para gestionar la compra:</p>
+            <p>Comunícate con nosotros para gestionar la compra:</p>
             <ul class="list-unstyled mb-5">
                 <li><strong>Whatsapp:</strong> 1144556678</li>
                 <li><strong>Instagram:</strong> <a href="https://www.instagram.com/sockevago" target="_blank">Sockevago</a></li>
                 <li><strong>Correo Electrónico:</strong> sockevainfo@gmail.com</li>
                 <li><strong>Local:</strong> Justo 3445, Buenos Aires, Argentina</li>
             </ul>
-            <img src="./img/metodosdepago.jpg" alt="Métodos de pago" class="img-fluid mt-3">
+            <img src="../img/metodosdepago.jpg" alt="Métodos de pago" class="img-fluid mt-3">
+        </section>
+
+        <!-- Formulario de Compra -->
+        <section class="compra-form bg-light p-4 rounded shadow">
+            <h2>Formulario de Pedido</h2>
+            <form action="./comprar.html" method="POST" class="needs-validation" novalidate>
+                <div class="form-group mb-3">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" class="form-control" id="nombre" name="nombre" required>
+                    <div class="invalid-feedback">Por favor, ingresa tu nombre.</div>
+                </div>
+                <div class="form-group mb-3">
+                    <label for="email">Correo electrónico:</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                    <div class="invalid-feedback">Por favor, ingresa un correo válido.</div>
+                </div>
+                <div class="form-group mb-3">
+                    <label for="direccion">Dirección de entrega:</label>
+                    <input type="text" class="form-control" id="direccion" name="direccion" required>
+                    <div class="invalid-feedback">Por favor, ingresa tu dirección.</div>
+                </div>
+                <div class="form-group mb-3">
+                    <label for="producto">Producto a comprar:</label>
+                    <select class="form-control" id="producto" name="producto" required>
+                        <option value="medias-hombre">Medias 3/4 Hombre</option>
+                        <option value="medias-mujer">Medias 3/4 Mujer</option>
+                        <option value="medias-deportivas">Medias Deportivas Unisex</option>
+                    </select>
+                    <div class="invalid-feedback">Selecciona un producto.</div>
+                </div>
+                <div class="form-group mb-3">
+                    <label for="cantidad">Cantidad:</label>
+                    <input type="number" class="form-control" id="cantidad" name="cantidad" min="1" required>
+                    <div class="invalid-feedback">Por favor, ingresa la cantidad.</div>
+                </div>
+                <button type="submit" class="btn btn-primary">Enviar <a href="./comprar.html"></button></a>
+            </form>
         </section>
     </main>
 
@@ -64,5 +139,23 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script>
+        // Validación del formulario de Bootstrap
+        (function() {
+            'use strict';
+            window.addEventListener('load', function() {
+                var forms = document.getElementsByClassName('needs-validation');
+                Array.prototype.filter.call(forms, function(form) {
+                    form.addEventListener('submit', function(event) {
+                        if (form.checkValidity() === false) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                        }
+                        form.classList.add('was-validated');
+                    }, false);
+                });
+            }, false);
+        })();
+    </script>
 </body>
 </html>
