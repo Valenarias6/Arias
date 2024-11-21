@@ -3,6 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sockeva: estilo, comodidad y calidad en cada par de medias. Descubre nuestra colección única y transforma cada paso.">
+    <meta name="author" content="Sockeva">
+    <meta name="keywords" content="medias, Sockeva, estilo, comodidad, calidad, moda, accesorios">
+    <meta property="og:title" content="Sockeva - Estilo en cada par">
+    <meta property="og:description" content="Pasión en cada paso. Descubre nuestra colección única de medias.">
+    <meta property="og:image" content="./img/logo.jpg">
+    <meta property="og:url" content="https://sockeva.com">
+    <meta name="twitter:card" content="summary_large_image">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100..900&display=swap" rel="stylesheet">
@@ -14,97 +22,144 @@
 
     <!-- Header -->
     <header class="bg-dark text-white py-3">
-        <div class="container d-flex flex-column align-items-center justify-content-center text-center">
+        <div class="container text-center">
             <div class="logo mb-3">
-                <img class="img-fluid" src="./img/logo.jpg" alt="Logo Sockeva">
+                <img src="./img/logo.jpg" alt="Logo Sockeva" class="img-fluid">
             </div>
             <h1 class="display-4">Sockeva</h1>
-            <p class="lead text-white">Pasión en cada paso, estilo en cada par</p>
+            <p class="lead">Pasión en cada paso, estilo en cada par</p>
         </div>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light" role="navigation" aria-label="Main Navigation">
             <div class="container">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav mx-auto">
-                        <li class="nav-item"> <a class="nav-link" href="#">Inicio</a> </li>
-                        <li class="nav-item"> <a class="nav-link" href="./pages/nosotros.html">Nosotros</a> </li>
-                        <li class="nav-item"> <a class="nav-link" href="./pages/productos.html">Productos</a> </li>
-                        <li class="nav-item"> <a class="nav-link" href="./pages/contacto.html">Contacto</a> </li>
+                        <li class="nav-item"><a class="nav-link" href="#">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./pages/nosotros.html">Nosotros</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./pages/productos.html">Productos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./pages/contacto.html">Contacto</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
-    </header>
+    </header>    
     
+    <nav aria-label="breadcrumb" class="bg-light p-3 rounded">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Inicio</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Productos</li>
+        </ol>
+    </nav>
+
     <!-- Carrusel de Imágenes -->
     <div id="carouselExample" class="carousel slide my-5" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <img src="./img/mediasazules.jpg" class="d-block w-100" alt="Medias azules">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Medias azules</h5>
+                    <p>Estilo y elegancia en cada paso.</p>
+                </div>
             </div>
             <div class="carousel-item">
                 <img src="./img/mediascelestes.jpg" class="d-block w-100" alt="Medias celestes">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Medias celestes</h5>
+                    <p>Comodidad en colores únicos.</p>
+                </div>
             </div>
             <div class="carousel-item">
                 <img src="./img/mediasrosa.jpg" class="d-block w-100" alt="Medias rosas">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Medias rosas</h5>
+                    <p>Perfectas para cualquier ocasión.</p>
+                </div>
             </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
+            <span class="visually-hidden">Anterior</span>
         </button>
         <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
+            <span class="visually-hidden">Siguiente</span>
         </button>
     </div>
 
-    <!-- Main Content -->
     <main class="container my-5">
-        <!-- Primera Sección -->
+
         <section class="text-center mb-5">
             <h2>Sockeva: La nueva experiencia en medias</h2>
             <div class="row my-4">
                 <div class="col-md-4">
-                    <img class="img-fluid img-thumbnail img-producto" src="./img/mediasazules.jpg" alt="Medias azules">
+                    <img class="img-fluid img-thumbnail" src="./img/mediasazules.jpg" alt="Medias azules">
                     <a href="./pages/comprar.html" class="btn btn-primary mt-2">Comprar</a>
                 </div>
                 <div class="col-md-4">
-                    <img class="img-fluid img-thumbnail img-producto" src="./img/mediascelestes.jpg" alt="Medias celestes">
+                    <img class="img-fluid img-thumbnail" src="./img/mediascelestes.jpg" alt="Medias celestes">
                     <a href="./pages/comprar.html" class="btn btn-primary mt-2">Comprar</a>
                 </div>
                 <div class="col-md-4">
-                    <img class="img-fluid img-thumbnail img-producto" src="./img/mediasrosa.jpg" alt="Medias rosas">
+                    <img class="img-fluid img-thumbnail" src="./img/mediasrosa.jpg" alt="Medias rosas">
                     <a href="./pages/comprar.html" class="btn btn-primary mt-2">Comprar</a>
                 </div>
             </div>
-            
-            <p class="text-muted">
-                Sockeva es una marca de medias que combina estilo, comodidad y calidad en cada par...
-            </p>
-            <img src="./img/metodosdepago.jpg" alt="Métodos de pago" class="img-fluid mt-3 logo-pago">
         </section>
 
-       <!-- Segunda Sección: Medias 3/4 Sockeva -->
-     <section class="row mb-5">
-     <div class="col-md-6 d-flex flex-column    align-items-center">
-     <div class="col-md-6 d-flex flex-column align-items-center">
-        <h2>Medias 3/4 Sockeva</h2>
-        <img class="img-fluid rounded imgGral" src="./img/calzadoejemplo.jpg" alt="Calzado Ejemplo">
-     </div>
-     <div class="col-md-6 d-flex align-items-center">
-        <p>Las medias 3/4 brindan comodidad, protección y estilo...</p>
-     </div>
- </section>
-    </main>
+      <!-- Sección de Testimonios -->
+<section class="testimonios bg-light py-5">
+    <div class="container text-center">
+        <h2 class="mb-4">Lo que dicen nuestros clientes</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="testimonial-box p-4 bg-primary text-white rounded shadow-sm">
+                    <blockquote class="blockquote mb-0">
+                        <p>“¡Las mejores medias que he usado! Cómodas y duraderas.”</p>
+                        <footer class="blockquote-footer text-white mt-3">María Gómez</footer>
+                    </blockquote>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="testimonial-box p-4 bg-primary text-white rounded shadow-sm">
+                    <blockquote class="blockquote mb-0">
+                        <p>“No solo son cómodas, ¡también se ven increíbles!”</p>
+                        <footer class="blockquote-footer text-white mt-3">Carlos Pérez</footer>
+                    </blockquote>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="testimonial-box p-4 bg-primary text-white rounded shadow-sm">
+                    <blockquote class="blockquote mb-0">
+                        <p>“Excelente calidad y diseño. ¡Muy recomendadas!”</p>
+                        <footer class="blockquote-footer text-white mt-3">Ana Rodríguez</footer>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+    <!-- Botón flotante de contacto -->
+    <div style="position: fixed; bottom: 20px; right: 20px; z-index: 1000;">
+        <a href="mailto:sockevainfo@gmail.com" class="btn btn-primary btn-lg rounded-circle" aria-label="Enviar correo a Sockeva">
+            <i class="bi bi-envelope"></i>
+        </a>
+    </div>
 
     <!-- Footer -->
     <footer class="bg-dark text-white py-4">
         <div class="container text-center">
             <h4>Contáctanos</h4>
-            <p class="text-white py-5">Email💌: sockevainfo@gmail.com | Teléfono☎: 4967-4856</p>
+            <p>Email💌: sockevainfo@gmail.com | Teléfono☎: 4967-4856</p>
+            <div class="social-icons mt-4">
+                <a href="https://facebook.com/sockeva" class="text-white mx-2"><i class="bi bi-facebook"></i></a>
+                <a href="https://instagram.com/sockeva" class="text-white mx-2"><i class="bi bi-instagram"></i></a>
+                <a href="https://twitter.com/sockeva" class="text-white mx-2"><i class="bi bi-twitter"></i></a>
+            </div>
         </div>
     </footer>
 

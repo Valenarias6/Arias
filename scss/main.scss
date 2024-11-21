@@ -1,0 +1,236 @@
+
+$primary-color: #f0f0f0;
+$text-color: #333;
+$link-color: #007bff;
+$link-hover-color: darken($link-color, 10%);
+$border-color: #ccc;
+$font-family: 'Arial', sans-serif;
+
+
+@mixin center($direction: both) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @if $direction == horizontal {
+    justify-content: center;
+    align-items: stretch;
+  } @else if $direction == vertical {
+    justify-content: stretch;
+    align-items: center;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-family;
+  background-color: $primary-color;
+  color: $text-color;
+}
+
+// Encabezado
+header {
+  background-color: darken($primary-color, 10%);
+  padding: 1rem;
+  border-bottom: 1px solid $border-color;
+
+  nav {
+    ul {
+      @include center(horizontal);
+      list-style: none;
+
+      li {
+        margin: 0 1rem;
+
+        a {
+          text-decoration: none;
+          color: $link-color;
+          transition: color 0.3s;
+
+          &:hover {
+            color: $link-hover-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Sección principal
+main {
+  padding: 2rem;
+
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+}
+
+.compra-form {
+  padding: 2rem;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: $text-color;
+  }
+
+  .form-group {
+    margin-bottom: 1.5rem;
+
+    label {
+      font-weight: bold;
+      color: $text-color;
+    }
+
+    .form-control, .form-select {
+      padding: 0.75rem;
+      border: 1px solid $border-color;
+      border-radius: 4px;
+      transition: border-color 0.3s;
+    }
+
+    .form-control:focus, .form-select:focus {
+      border-color: $link-color;
+      outline: none;
+    }
+
+    .invalid-feedback {
+      font-size: 0.875rem;
+      color: #e74c3c;
+    }
+  }
+
+  button[type="submit"] {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.25rem;
+    background-color: $link-color;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: darken($link-color, 10%);
+    }
+  }
+}
+
+// Estilo para las tarjetas de productos
+.productos-destacados .card {
+  border: 1px solid $border-color;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .card-img-top {
+    max-height: 200px;
+    object-fit: cover;
+  }
+
+  .card-body {
+    padding: 1.5rem;
+
+    .card-title {
+      font-size: 1.25rem;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+
+    .card-text {
+      font-size: 1rem;
+      color: $text-color;
+    }
+
+    .text-primary {
+      font-size: 1.25rem;
+      font-weight: bold;
+      color: $link-color;
+    }
+  }
+}
+
+// Footer
+footer {
+  background-color: darken($primary-color, 20%);
+  padding: 2rem;
+  color: lighten($text-color, 30%);
+  
+  h4 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  a {
+    color: $link-color;
+    text-decoration: none;
+    transition: color 0.3s;
+
+    &:hover {
+      color: darken($link-color, 10%);
+    }
+  }
+}
+
+// Media Query para pantallas pequeñas
+@media (max-width: 768px) {
+  header {
+    padding: 1rem;
+  }
+
+  .productos-destacados .card {
+    margin-bottom: 1.5rem;
+  }
+
+  .compra-form {
+    padding: 1.5rem;
+  }
+
+  .card-body {
+    padding: 1rem;
+  }
+
+  footer {
+    padding: 1.5rem;
+  }
+}
+
+a {
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: $link-hover-color;
+  }
+}
+
+button[type="submit"] {
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: darken($link-color, 10%);
+  }
+}
