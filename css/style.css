@@ -17,6 +17,15 @@ header .logo img {
     border-radius: 20%;
 }
 
+.logo {
+    transition: all 3s ease;  
+  }
+  
+  .logo:hover {
+    color: blue;  
+    transform: scale(1.2);
+  }
+
 header h1, header h2 {
     text-align: center;
     margin: 10px;
@@ -26,6 +35,8 @@ header h1, header h2 {
 header h1 {
     font-size: 2.5rem;
     color: #007bff;
+    font-weight: bold;  /* Engrosar el texto */
+    animation: changeColor 2s infinite alternate;
 }
 
 header h2 {
