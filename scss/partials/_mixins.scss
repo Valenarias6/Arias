@@ -1,0 +1,13 @@
+@mixin center($direction: both) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @if $direction == horizontal {
+      justify-content: center;
+      align-items: stretch;
+    } @else if $direction == vertical {
+      justify-content: stretch;
+      align-items: center;
+    }
+  }
+  

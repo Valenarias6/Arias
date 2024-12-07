@@ -3,6 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contáctanos para cualquier consulta. Sockeva ofrece productos de alta calidad y estamos aquí para ayudarte.">
+    <meta name="keywords" content="Sockeva, contacto, consulta, productos, contacto Sockeva, medios, servicio al cliente">
+    <meta name="author" content="Sockeva">
+    <meta property="og:title" content="Contacto | Sockeva">
+    <meta property="og:description" content="Contáctanos para consultas sobre nuestros productos. Estamos aquí para ayudarte.">
+    <meta property="og:image" content="../img/logo.jpg">
+    <meta property="og:url" content="https://sockeva.com/contacto">
+    <meta name="twitter:card" content="summary_large_image">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Salsa&family=Work+Sans:wght@100..900&display=swap" rel="stylesheet">
@@ -14,7 +22,7 @@
     <!-- Header -->
     <header class="bg-dark text-white text-center py-4">
         <div class="logo mb-3">
-            <img class="img_logo" src="../img/logo.jpg" alt="Logo de Sockeva">
+            <img class="img_logo" src="../img/logo.jpg" alt="Logo de Sockeva" class="img-fluid">
         </div>
         <h1 class="display-4">Sockeva</h1>
         <h2 class="h2">Contactos</h2>
@@ -81,26 +89,10 @@
         <p>Sockeva | Todos los derechos reservados.</p>
     </footer>
 
+    <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script>
-        // Custom Bootstrap validation for the form
-        (function() {
-            'use strict';
-            window.addEventListener('load', function() {
-                var forms = document.getElementsByClassName('needs-validation');
-                Array.prototype.filter.call(forms, function(form) {
-                    form.addEventListener('submit', function(event) {
-                        if (form.checkValidity() === false) {
-                            event.preventDefault();
-                            event.stopPropagation();
-                        }
-                        form.classList.add('was-validated');
-                    }, false);
-                });
-            }, false);
-        })();
-    </script>
+    
 </body>
 </html>

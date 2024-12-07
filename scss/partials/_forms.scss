@@ -1,0 +1,39 @@
+.compra-form {
+    padding: 2rem;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      color: $text-color;
+    }
+  
+    .form-group {
+      margin-bottom: 1.5rem;
+  
+      label {
+        font-weight: bold;
+        color: $text-color;
+      }
+  
+      .form-control, .form-select {
+        padding: 0.75rem;
+        border: 1px solid $border-color;
+        border-radius: 4px;
+        transition: border-color 0.3s;
+      }
+  
+      .form-control:focus, .form-select:focus {
+        border-color: $link-color;
+        outline: none;
+      }
+  
+      .invalid-feedback {
+        font-size: 0.875rem;
+        color: #e74c3c;
+      }
+    }
+  }
+  

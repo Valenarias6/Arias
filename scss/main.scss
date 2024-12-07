@@ -1,4 +1,14 @@
 
+@import 'partials/variables';
+@import 'partials/mixins';
+@import 'partials/reset';
+@import 'partials/header';
+@import 'partials/footer';
+@import 'partials/buttons';
+@import 'partials/cards';
+@import 'partials/forms';
+@import 'partials/media-queries';
+
 $primary-color: #f0f0f0;
 $text-color: #333;
 $link-color: #007bff;

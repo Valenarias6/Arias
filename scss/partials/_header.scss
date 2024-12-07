@@ -1,0 +1,27 @@
+header {
+    background-color: darken($primary-color, 10%);
+    padding: 1rem;
+    border-bottom: 1px solid $border-color;
+  
+    nav {
+      ul {
+        @include center(horizontal);
+        list-style: none;
+  
+        li {
+          margin: 0 1rem;
+  
+          a {
+            text-decoration: none;
+            color: $link-color;
+            transition: color 0.3s;
+  
+            &:hover {
+              color: $link-hover-color;
+            }
+          }
+        }
+      }
+    }
+  }
+  
